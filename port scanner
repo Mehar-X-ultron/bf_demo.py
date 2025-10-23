@@ -1,0 +1,26 @@
+# inside your project folder
+git init
+git add port_scanner_simple.py
+# add a README
+cat > README.md <<'EOF'
+# Port Scanner (simple)
+Beginner-friendly threaded TCP port scanner for lab use only.
+
+Usage:
+  python3 port_scanner_simple.py --host 127.0.0.1 --ports 22,80,8080
+EOF
+git add README.md
+
+# .gitignore (optional)
+cat > .gitignore <<'EOF'
+.venv/
+__pycache__/
+*.pyc
+EOF
+git add .gitignore
+
+git commit -m "Initial commit — simple threaded port scanner"
+# add the remote (replace URL with your repository's URL shown on GitHub)
+git remote add origin https://github.com/your-username/your-repo.git
+git branch -M main
+git push -u origin main
